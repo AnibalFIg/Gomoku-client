@@ -7,5 +7,15 @@
   "rules": {
     "prefer-const": "error",
     "no-var": "error"
-  }
+  },
+    "parser": "babel-eslint",
+    "rules" : {
+      "strict": 0
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "script",
+      "allowImportExportEverywhere": true,
+      "codeFrame": false
+    }
 }
