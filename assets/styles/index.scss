@@ -9,6 +9,12 @@ body {
   background-color: $background-color;
 }
 
+//
+// .center-div {
+//   margin: 0 auto;
+//   width: 100px;
+// }
+
 .title {
   font-size: 42px;
   color: black;
@@ -16,6 +22,7 @@ body {
   margin-left: 10px;
   text-align: center;
 }
+
 //
 // .flex-container {
 //   display: flex;
@@ -25,32 +32,49 @@ body {
 //   flex-direction: column;
 // }
 //
-// // .flex-center {
-// //   align-items: center;
-// //   justify-content: center;
-// // }
-// //
-// // .flex-wrap {
-// //   flex-wrap: wrap;
-// // }
+// .flex-center {
+//   align-items: center;
+//   justify-content: center;
+// }
+//
+// .flex-wrap {
+//   flex-wrap: wrap;
+// }
 //
 // .gameboard-container {
 //   height: 100%;
 //   width: 100%;
 // }
 //
-// // .gameboard {
-// //   width: 618px;
-// // }
-//
-// .square {
-//   width: 100px;
-//   height: 100px;
-//   border: 3px solid mediumslateblue;
-//   font-size: 56px;
+// .gameboard {
+//   width: 618px;
+//   display: grid;
 // }
 //
-// .square:hover {
-//   background: floralwhite;
-//   cursor: pointer;
-// }
+
+.gameboard-container {
+  display: grid;
+  grid-template-columns: repeat(3, 6fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, 100px);
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 3px solid mediumslateblue;
+  font-size: 56px;
+  text-align: center;
+}
+
+.square:hover {
+  background: floralwhite;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}

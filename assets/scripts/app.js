@@ -5,7 +5,6 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
-
 $(() => {
   const playerOne = 'X'
   const playerTwo = 'O'
@@ -20,7 +19,7 @@ $(() => {
   const sqr = $('.square')
   console.log(sqr)
 
-  const results = null
+  let results = []
 
   sqr.on('click', function (e) {
     movesMade++
@@ -62,7 +61,7 @@ $(() => {
   function checkForWinner () {
     if (movesMade > 4) {
       const moves = Array.prototype.slice.call($('.square'))
-      let results = moves.map(function (square) {
+      results = moves.map(function (square) {
         return square.innerHTML
       })
     }
@@ -79,6 +78,7 @@ $(() => {
   ]
 
   return winningCombos.find(function (combo) {
+    console.log(results)
     if (results[combo[0]] !== '' && results[combo[1]] !== '' && results[combo[2]] !== '' && results[combo[0]] === results[combo[1]] && results[combo[1]] === results[combo[2]]) {
       return true
     } else {
