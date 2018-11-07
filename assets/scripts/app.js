@@ -24,7 +24,7 @@ $(() => {
   sqr.on('click', function (e) {
     movesMade++
 
-    if (currentTurn === 1) {
+    if (currentTurn % 2 === 1) {
       event.target.innerHTML = playerOne
       event.target.style.color = 'red'
       currentTurn++
