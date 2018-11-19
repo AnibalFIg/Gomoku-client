@@ -1,91 +1,215 @@
 @import '~bootstrap/scss/bootstrap';
-$font-family: 'Open Sans', sans-serif;
-$background-color: gainsboro;
 
-html,
-body {
-  height: 100%;
-  font-family: $font-family;
-  background-color: $background-color;
-}
-
-//
-// .center-div {
-//   margin: 0 auto;
-//   width: 100px;
-// }
-
-.title {
-  font-size: 42px;
-  color: black;
-  margin-bottom: 10px;
-  margin-left: 10px;
+header {
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
   text-align: center;
+  background-color: #e8cb58;
 }
 
+h1 {
+  font-size: 50px;
+  font-family: Gainsboro, sans-serif;
+}
+
+p {
+  font-size: 70px;
+  justify-content: center;
+  text-align: center;
+  background-color: #616744;
+}
+
+table {
+  border-collapse: collapse;
+  flex-direction: column;
+  left: 50%;
+  margin-left: 20%;
+  top: 50px;
+}
+
+body {
+  background-color: #37414a;
+}
+
+.board-container {
+  height: 100%;
+  width: 100%;
+}
+
+.board {
+  width: 330px;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box {
+  align-items: center;
+  background-color: #b9a150;
+  border: 5px solid;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+  text-align: center;
+  font-size: 50px;
+  display: none;
+}
+
+.box:hover {
+  background-color: #616774;
+  transition: 0.5s ease;
+}
+
+.msg {
+  font-size: 70px;
+  display: none;
+  justify-content: center;
+  text-align: center;
+  background-color: #abd1bb;
+  font-family: Arial, sans-serif;
+}
+
+#change-password,
+#sign-out,
+#create-game,
+#restartGame,
+#previousGames {
+  display: none;
+}
+
+.tie {
+  font-size: 100px;
+  background-color: #abd1bb;
+}
+
+// $font-family: 'Open Sans', sans-serif;
+// $background-color: gainsboro;
 //
-// .flex-container {
-//   display: flex;
+// html,
+// body {
+//   height: 100%;
+//   font-family: $font-family;
+//   background-color: $background-color;
 // }
 //
-// .flex-column {
-//   flex-direction: column;
+// //
+// // .center-div {
+// //   margin: 0 auto;
+// //   width: 100px;
+// // }
+//
+// .title {
+//   font-size: 42px;
+//   color: black;
+//   margin-bottom: 10px;
+//   margin-left: 10px;
+//   text-align: center;
 // }
 //
-// .flex-center {
-//   align-items: center;
+// //
+// // .flex-container {
+// //   display: flex;
+// // }
+// //
+// // .flex-column {
+// //   flex-direction: column;
+// // }
+// //
+// // .flex-center {
+// //   align-items: center;
+// //   justify-content: center;
+// // }
+// //
+// // .flex-wrap {
+// //   flex-wrap: wrap;
+// // }
+// //
+// // .gameboard-container {
+// //   height: 100%;
+// //   width: 100%;
+// // }
+// //
+// // .gameboard {
+// //   width: 618px;
+// //   display: grid;
+// // }
+// //
+//
+// .gameboard-container {
+//   display: grid;
+//   grid-template-columns: repeat(3, 6fr);
+//   grid-gap: 10px;
+//   grid-auto-rows: minmax(100px, 100px);
+//   justify-items: center;
+//   justify-content: space-evenly;
+// }
+//
+// .square {
+//   width: 100px;
+//   height: 100px;
+//   border: 3px solid mediumslateblue;
+//   font-size: 56px;
+//   text-align: center;
+// }
+//
+// .square:hover {
+//   background: floralwhite;
+// }
+//
+// .wrapper {
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 200px;
 //   justify-content: center;
 // }
 //
-// .flex-wrap {
-//   flex-wrap: wrap;
+// .reset {
+//   margin: 20px 100px 20px 55px;
+//   padding: 10px;
 // }
 //
-// .gameboard-container {
+// .buttonclass {
+//   justify-content: center;
+//   margin: 0 auto;
+// }
+//
+// .btn-down {
+//   display: block;
+//   float: none;
+//   justify-content: center;
+//   padding: 10px;
+//   text-align: center;
+// }
+//
+// .btn {
+//   border-radius: 25px;
+//   // filter: blur(1px);
+//   // opacity: 0.75;
+// }
+//
+// .form-button {
+//   display: flex;
+//   justify-content: center;
+//   padding: 10px;
+//   text-align: center;
+// }
+//
+// .modal-fade {
+//   display: none;
 //   height: 100%;
+//   justify-content: center;
+//   opacity: 50%;
+//   position: absolute;
+//   top: 0;
 //   width: 100%;
 // }
-//
-// .gameboard {
-//   width: 618px;
-//   display: grid;
-// }
-//
-
-.gameboard-container {
-  display: grid;
-  grid-template-columns: repeat(3, 6fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, 100px);
-  justify-items: center;
-  justify-content: space-evenly;
-}
-
-.square {
-  width: 100px;
-  height: 100px;
-  border: 3px solid mediumslateblue;
-  font-size: 56px;
-  text-align: center;
-}
-
-.square:hover {
-  background: floralwhite;
-}
-
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  justify-content: center;
-}
-
-.reset {
-  margin: 20px 100px 20px 55px;
-  padding: 10px;
-}
-
-.buttonclass {
-  justify-content: center;
-  margin: 0 auto;
-}
